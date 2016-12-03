@@ -1,8 +1,8 @@
-module UpDownCount(input Swap, Enable, Clock, Reset, output logic[3:0] DownCountS, UpCountS);
+module UpDownCount(input Swap, Enable, Clock, output logic[3:0] DownCountS, UpCountS);
     logic[3:0] DownCountE, UpCountE;
 
-    Registrador DownCount(.Clock(Clock), .Entrada(DownCountE), .Saida(DownCountS), .Reset(Reset)),
-                UpCount(.Clock(Clock), .Entrada(UpCountE), .Saida(UpCountS), .Reset(Reset));
+    Registrador DownCount(.Clock(Clock), .Entrada(DownCountE), .Saida(DownCountS)),
+                UpCount(.Clock(Clock), .Entrada(UpCountE), .Saida(UpCountS));
 
     always_comb
         if(Enable)
