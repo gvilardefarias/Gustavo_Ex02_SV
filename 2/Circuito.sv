@@ -5,12 +5,12 @@ module Circuito(input Clock, output logic f);
                 Saida(.Clock(Clock), .Entrada(EntradaSaida), .Saida(f));
 
     always_comb begin
-        if(count==499)
-            Entrada = 0;
+        if(count==9'd499)
+            EntradaCount = 9'd0;
         else
-            Entrada = Entrada + 9'd1;
+            EntradaCount = count + 9'd1;
 
-        if(count>19 && count<90)
+        if(count>9'd19 && count<9'd90)
             EntradaSaida = 9'd0;
         else
             EntradaSaida = 9'd1;
