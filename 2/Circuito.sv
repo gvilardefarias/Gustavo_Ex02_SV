@@ -16,3 +16,5 @@ module Circuito(input Clock, output logic f);
             EntradaSaida = 9'd1;
     end
 endmodule
+
+//0.2MHz

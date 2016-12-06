@@ -1,5 +1,5 @@
-module Circuito(input Clock, output logic f, output logic[2:0] countSubida, countDescida);
-    logic[2:0] saida1, saida2;
+module Circuito(input Clock, output logic f1, f2);
+    logic[2:0] countSubida, countDescida, saida1, saida2;
 
     ContadorSubida Subida(.Clock(Clock), .Saida(countSubida));
     ContadorDescida Descida(.Clock(Clock), .Saida(countDescida));
@@ -17,5 +17,5 @@ module Circuito(input Clock, output logic f, output logic[2:0] countSubida, coun
             saida2 <= 3'd1;
 
     always_comb
-        f = saida1 || saida2;
+        f1 = saida1 || saida2;
 endmodule
