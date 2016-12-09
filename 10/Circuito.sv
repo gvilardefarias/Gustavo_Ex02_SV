@@ -1,21 +1,17 @@
 module Circuito(input Clock, output logic f1, f2);
-    logic[2:0] countSubida, countDescida, saida1, saida2;
+    logic[12:0] countSubida, countDescida, saida1, saida2;
 
-    ContadorSubida Subida(.Clock(Clock), .Saida(countSubida));
-    ContadorDescida Descida(.Clock(Clock), .Saida(countDescida));
+    ContadorDescida Count(.Clock(Clock), .Saida(countDescida));
 
-    always_ff @(posedge Clock)
-        if(countSubida == 3'd3)
-            saida1 <= 3'd0;
+    always_ff @(negedge Clock) begin
+        if(countDescida>=13'd3849 && countDescida<13'd4149)
+            f1 <= 13'd0;
         else
-            saida1 <= 3'd1;
+            f1 <= 13'd1;
 
-    always_ff @(negedge Clock)
-        if(countDescida == 3'd2)
-            saida2 <= 3'd0;
+        if(countDescida>=13'd3199 && countDescida<13'd3799)
+            f2 <= 13'd0;
         else
-            saida2 <= 3'd1;
-
-    always_comb
-        f1 = saida1 || saida2;
+            f2 <= 13'd1;
+    end
 endmodule
