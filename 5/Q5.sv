@@ -1,4 +1,4 @@
-module Q5 (input logic resetn, clock, input logic[7:0] data_in, output logic[2:0] msb);
+module Q5(input logic resetn, clock, input logic[7:0] data_in, output logic[2:0] msb);
     integer i;
 
     always_ff @(posedge clock or negedge resetn) begin
