@@ -1,0 +1,1 @@
+A unica diferença dessa questão para a questão 7 é que o valor do 'c' será o 'b' antigo no lugar do novo, pois como o 'b' é não-bloqueante a operação de atualização da variavel só é feita após todas as outras operações serem feitas, então o valor que vale na operação de soma na atribuição da variavel 'c' é o valor não atualizado da variavel 'b'.

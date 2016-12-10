@@ -1,1 +1,3 @@
-A variavel 'a' recebe o valor antigo do 'b' mais o valor antigo do 'c' pois como é bloqueante ele recebe os valores do 'b' e do 'c' antes de serem atualizados. A variavel 'b' recebe o valor do 'a' mais o valor antigo do 'c' e a variavel 'c' recebe o novo valor do 'b' e do 'a'. Precisamos de um flip-flop para a variavel 'b' porque para as contas utilizamos o valor atualizado e o destualizado do 'b'.
+A variavel 'a' recebe o valor antigo do 'b' mais o valor antigo do 'c' pois como é bloqueante ele recebe os valores do 'b' e do 'c' antes de serem atualizados.
+Já variavel 'b' recebe o valor do 'a' mais o valor antigo do 'c' e a variavel 'c' recebe o novo valor do 'b' e do 'a'.
+Precisamos de um flip-flop para a variavel 'b' porque para as contas utilizamos seu valor atualizado e destualizado.
