@@ -1,0 +1,5 @@
+Para este circuito precisamos adicionar um flip-flop para armazenar a varivael 'a', pois utilizaremos seu valor atualizado e desatualizado.
+Essa variavel recebe o resultado de 'b' + 'c', mas somente ao final de todas as operações por isso as outras operações que usarem 'a' devem utilizar seu valor antes dessa soma.
+Por isso 'b' recebe o valor de 'a' desatualizado mais o valor de 'c' desatualizado também, pois como mostrado no código no momento desta operação o valor de 'c' ainda não foi atualizado.
+E por fim 'c' recebe o valor antigo de 'a' e o novo de 'b'.
+Concluimos que quando precisamos dos valores atualizados e desatualizados de uma variavel ou quando precisarmos guarda-la usamos um flip-flop.
